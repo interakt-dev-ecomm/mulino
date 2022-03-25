@@ -24,7 +24,7 @@ const inv = require('../lib/invoicing/invoicing');
 // create new day docs
 router.post('/today', async (req, res, next) => {
     const date = DateTime.now().toISODate();
-    //const date = '2022-03-28'
+    //const date = '2022-03-23'
     const dateObject = dates.processingDate(date);
 
     res.json({status: `daily setup run for ${date}`})

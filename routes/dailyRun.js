@@ -44,13 +44,19 @@ router.post('/daily-run', async (req, res, next) => {
 });
 
 router.post('/eod', async (req, res, next) => {
+    let submitted = req.body.name
+    if(!submitted) {
+        submitted = 'none'
+    }
+
+
     const date = DateTime.now().toISODate();
     //const date = '2022-03-28'
     const dateObject = dates.processingDate(date);
     
     res.json({status: `end of day completed for ${dateObject.processingDate}`});
 
-    const runEod = eod.endOfDay(dateObject);
+    const runEod = eod.endOfDay(dateObject, submitted);
     
     // if friday process monday deliveries
     if (dateObject.processSunday === 1) {
