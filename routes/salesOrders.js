@@ -36,7 +36,6 @@ const dailyRun = require('../lib/functions/docTypes/dailyRun');
 // new order
 router.post('/new-order', async (req, res, next) => {
     const {doc, date} = req.body;
-
     if (!doc || !date) {
         res.json({status: 'missing data'});
         return
