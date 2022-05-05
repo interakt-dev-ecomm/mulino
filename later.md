@@ -25,6 +25,9 @@
 
 # updates
 
+
+- purchase order - sort by item code
+- end of day - deliveries in order of customer code
 overdue invoice notification change to start if outstanding balance rather than date, then account on hold if still not paid 10 days later
 //introduce customer code 
 overdue notifications: only create if doesn't exist
