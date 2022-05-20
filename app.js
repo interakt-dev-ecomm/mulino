@@ -11,6 +11,8 @@ const dailySetup = require('./routes/prepareDay');
 const dailyRun = require('./routes/dailyRun');
 const invoicing = require('./routes/invoicing');
 const holidays = require('./routes/holidays');
+const reports = require('./routes/reports');
+
 //var usersRouter = require('./routes/users');
 
 var app = express();
@@ -31,6 +33,7 @@ app.use('/daily-setup', dailySetup);
 app.use('/daily-run', dailyRun);
 app.use('/invoicing', invoicing);
 app.use('/holidays', holidays);
+app.use('/reports', reports);
 
 
 //app.use('/', indexRouter);
